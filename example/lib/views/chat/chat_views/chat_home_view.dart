@@ -1,5 +1,8 @@
 import 'package:contra_ui/contra_ui.dart';
 import 'package:example/views/chat/chat_views/chat_list_view.dart';
+import 'package:example/views/chat/chat_views/chat_messages_view.dart';
+import 'package:example/views/chat/chat_views/chat_search_view.dart';
+import 'package:example/views/chat/message_model.dart';
 import 'package:flutter/material.dart';
 
 class ChatHomeView extends StatefulWidget {
@@ -14,8 +17,8 @@ class _ChatHomeViewState extends State<ChatHomeView> {
 
   final List<Widget> _childrenWidgets = [
     ChatListView(),
-    ChatListView(),
-    ChatListView(),
+    ChatSearchView(),
+    ChatMessagesView(chat: Chat(name: 'Kai', message: 'Hello Vij', time: '6:30', count: '9'),),
     ChatListView(),
   ];
 

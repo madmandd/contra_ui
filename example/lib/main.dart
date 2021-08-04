@@ -1,5 +1,4 @@
-
-import 'package:example/views/chat/chat_main.dart';
+import 'package:example/views/chat/chat_views/chat_home_view.dart';
 import 'package:flutter/material.dart';
 
 
@@ -14,7 +13,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         fontFamily: 'Montserrat'
       ),
-      home: ChatMainView(),
+      home: ChatHomeView(),
     );
   }
 }
