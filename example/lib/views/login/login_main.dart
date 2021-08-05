@@ -1,5 +1,11 @@
 import 'package:flutter/material.dart';
-import './login_views/screens.dart';
+import './login_views/contact_us.dart';
+import './login_views/login_type_one.dart';
+import './login_views/login_type_two.dart';
+import './login_views/login_type_three.dart';
+import './login_views/login_type_four.dart';
+import './login_views/signup_type_one.dart';
+import './login_views/verification_type.dart';
 
 class LoginMainView extends StatefulWidget {
   const LoginMainView({Key? key}) : super(key: key);

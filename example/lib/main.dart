@@ -1,5 +1,6 @@
-import 'package:example/views/chat/chat_views/chat_home_view.dart';
+
 import 'package:flutter/material.dart';
+import 'views/chart/line_chart.dart';
 
 
 void main() {
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         fontFamily: 'Montserrat'
       ),
-      home: ChatHomeView(),
+      home: LineChartView(),
     );
   }
 }
