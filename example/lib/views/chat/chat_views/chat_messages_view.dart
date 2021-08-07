@@ -102,13 +102,13 @@ class _ChatMessagesViewState extends State<ChatMessagesView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: white,
+        backgroundColor: ContraColor.white,
         elevation: 0,
         leading: IconButton(
             onPressed: () {
               Navigator.of(context).pop();
             },
-            color: wood_smoke,
+            color: ContraColor.wood_smoke,
             icon: Icon(Icons.arrow_back)),
         title: ContraText(
           alignment: Alignment.topLeft,
@@ -119,13 +119,13 @@ class _ChatMessagesViewState extends State<ChatMessagesView> {
               onPressed: () {},
               icon: Icon(
                 Icons.video_call,
-                color: black,
+                color: ContraColor.black,
                 size: 36,
               ))
         ],
       ),
       body: Container(
-        color: white,
+        color: ContraColor.white,
         child: Column(
           children: [
             Flexible(

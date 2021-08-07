@@ -28,7 +28,7 @@ class ContraText extends StatelessWidget {
         style: TextStyle(
           fontSize: fontSize ?? 36.0,
           fontWeight: fontWeight ?? FontWeight.w800,
-          color: textColor ?? black,
+          color: textColor ?? ContraColor.black,
         ),
       ),
     );
@@ -52,15 +52,19 @@ class ContraRichText extends StatelessWidget {
         text: TextSpan(
           children: [
             TextSpan(
-                text: firstText,
-                style: TextStyle(
-                    fontWeight: FontWeight.w500, fontSize: 13, color: black)),
+              text: firstText,
+              style: TextStyle(
+                fontWeight: FontWeight.w500,
+                fontSize: 13,
+                color: ContraColor.black,
+              ),
+            ),
             TextSpan(
                 text: secondText,
                 style: TextStyle(
                   fontSize: 13,
                   fontWeight: FontWeight.w500,
-                  color: flamingo,
+                  color: ContraColor.flamingo,
                 ))
           ],
         ),
@@ -91,9 +95,10 @@ class ContraTextImage extends StatelessWidget {
       width: size ?? 48,
       height: size ?? 48,
       decoration: ShapeDecoration(
-        color: backgroundColor ?? dandelion,
+        color: backgroundColor ?? ContraColor.dandelion,
         shape: CircleBorder(
-          side: BorderSide(width: 2, color: borderColor ?? wood_smoke),
+          side: BorderSide(
+              width: 2, color: borderColor ?? ContraColor.wood_smoke),
         ),
       ),
       child: Center(
@@ -102,7 +107,7 @@ class ContraTextImage extends StatelessWidget {
           style: TextStyle(
             fontSize: 24,
             fontWeight: FontWeight.w800,
-            color: textColor ?? white,
+            color: textColor ?? ContraColor.white,
           ),
         ),
       ),

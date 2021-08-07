@@ -37,7 +37,7 @@ class ChatListItem extends StatelessWidget {
                     textAlign: TextAlign.start,
                     style: TextStyle(
                         fontSize: 21,
-                        color: wood_smoke,
+                        color: ContraColor.wood_smoke,
                         fontWeight: FontWeight.w800),
                   ),
                   SizedBox(
@@ -47,7 +47,7 @@ class ChatListItem extends StatelessWidget {
                     chat!.message,
                     textAlign: TextAlign.start,
                     style: TextStyle(
-                      color: trout,
+                      color: ContraColor.trout,
                       fontWeight: FontWeight.w500,
                       fontSize: 15,
                     ),
@@ -65,7 +65,7 @@ class ChatListItem extends StatelessWidget {
                     chat!.time,
                     style: TextStyle(
                       fontSize: 11,
-                      color: santas_gray_10,
+                      color: ContraColor.santas_gray_10,
                       fontWeight: FontWeight.bold
                     ),
                   ),

@@ -16,13 +16,13 @@ class VerificationType extends StatelessWidget {
               Expanded(
                 flex: 1,
                 child: Container(
-                  color: lightening_yellow,
+                  color: ContraColor.lightening_yellow,
                 ),
               ),
               Expanded(
                 flex: 2,
                 child: Container(
-                  color: lightening_yellow,
+                  color: ContraColor.lightening_yellow,
                   alignment: Alignment.bottomCenter,
                   child: SvgPicture.asset(
                     '../assets/images/peep_verify.svg',
@@ -35,7 +35,7 @@ class VerificationType extends StatelessWidget {
                 flex: 3,
                 child: Container(
                   padding: EdgeInsets.all(24.0),
-                  color: white,
+                  color: ContraColor.white,
                   child: Column(
                     children: [
                       SizedBox(
@@ -97,7 +97,7 @@ class VerificationType extends StatelessWidget {
                         label: 'Verify',
                         icon: SvgPicture.asset(
                           '../assets/icons/arrow_forward.svg',
-                          color: white,
+                          color: ContraColor.white,
                           width: 21,
                           height: 21,
                         ),
@@ -132,7 +132,7 @@ class VerificationType extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 27.0,
                     fontWeight: FontWeight.w800,
-                    color: wood_smoke,
+                    color: ContraColor.wood_smoke,
                   ),
                 )
               ],

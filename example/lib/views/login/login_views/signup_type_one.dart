@@ -31,7 +31,7 @@ class SignUpTypeOne extends StatelessWidget {
                       textAlign: TextAlign.start,
                       style: TextStyle(
                         fontSize: 21,
-                        color: trout,
+                        color: ContraColor.trout,
                         fontWeight: FontWeight.w500,
                       ),
                     ),
@@ -66,10 +66,10 @@ class SignUpTypeOne extends StatelessWidget {
                       label: 'Sign up',
                       isShadow: true,
 
-                      shadowColor: wood_smoke,
-                      bordercolor: wood_smoke,
-                      onPrimaryColor: wood_smoke,
-                      primaryColor: lightening_yellow,
+                      shadowColor: ContraColor.wood_smoke,
+                      bordercolor: ContraColor.wood_smoke,
+                      onPrimaryColor: ContraColor.wood_smoke,
+                      primaryColor: ContraColor.lightening_yellow,
 
                     ),
                     SizedBox(height: 36,),

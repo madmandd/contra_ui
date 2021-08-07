@@ -31,7 +31,10 @@ class ContraButton extends StatelessWidget {
       child: Text(
         text!,
         maxLines: 1,
-        style: TextStyle(fontSize: fontSize ?? 12, fontWeight: FontWeight.w800),
+        style: TextStyle(
+          fontSize: fontSize ?? 12,
+          fontWeight: FontWeight.w800,
+        ),
       ),
     );
   }
@@ -78,19 +81,19 @@ class ContraIconButton extends StatelessWidget {
         height: height ?? 48.0,
         padding: const EdgeInsets.symmetric(horizontal: 16.0),
         decoration: ShapeDecoration(
-          color: primaryColor ?? black,
+          color: primaryColor ?? ContraColor.black,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(16.0),
             side: BorderSide(
               width: 2,
-              color: bordercolor ?? black,
+              color: bordercolor ?? ContraColor.black,
             ),
           ),
           shadows: isShadow == true
               ? [
                   BoxShadow(
                     offset: Offset(0.0, 4.0),
-                    color: shadowColor ?? black,
+                    color: shadowColor ?? ContraColor.black,
                   ),
                 ]
               : null,
@@ -104,7 +107,7 @@ class ContraIconButton extends StatelessWidget {
               child: Text(
                 label!,
                 style: TextStyle(
-                  color: onPrimaryColor ?? white,
+                  color: onPrimaryColor ?? ContraColor.white,
                   fontSize: 21,
                   fontWeight: FontWeight.bold,
                 ),
@@ -144,12 +147,12 @@ class ContraIconCircleButton extends StatelessWidget {
       width: size ?? size,
       decoration: ShapeDecoration(
         shape: CircleBorder(
-          side: BorderSide(width: 2, color: borderColor ?? black),
+          side: BorderSide(width: 2, color: borderColor ?? ContraColor.black),
         ),
-        color: backgroundColor ?? white,
+        color: backgroundColor ?? ContraColor.white,
         shadows: [
           BoxShadow(
-            color: shadowColor ?? black,
+            color: shadowColor ?? ContraColor.black,
             offset: Offset(0.0, 4.0),
           )
         ],
@@ -181,11 +184,11 @@ class ContraBadge extends StatelessWidget {
     return Container(
       height: size,
       width: size,
-
       decoration: ShapeDecoration(
-        color: backgroundColor ?? flamingo,
+        color: backgroundColor ?? ContraColor.flamingo,
         shape: CircleBorder(
-          side: BorderSide(width: 2, color: backgroundColor ?? flamingo),
+          side: BorderSide(
+              width: 2, color: backgroundColor ?? ContraColor.flamingo),
         ),
       ),
       child: Center(
@@ -194,7 +197,7 @@ class ContraBadge extends StatelessWidget {
           style: TextStyle(
             fontSize: 12,
             fontWeight: FontWeight.bold,
-            color: textColor ?? white,
+            color: textColor ?? ContraColor.white,
           ),
         ),
       ),

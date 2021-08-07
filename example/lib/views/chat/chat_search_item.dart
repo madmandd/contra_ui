@@ -39,7 +39,7 @@ class ChatSearchItem extends StatelessWidget {
               style: TextStyle(
                 fontSize: 17,
                 fontWeight: FontWeight.bold,
-                color: textColor ?? wood_smoke,
+                color: textColor ?? ContraColor.wood_smoke,
               ),
             ),
           ),
@@ -49,7 +49,7 @@ class ChatSearchItem extends StatelessWidget {
               chat!.time,
               style: TextStyle(
                   fontSize: 12,
-                  color: santas_gray_10,
+                  color: ContraColor.santas_gray_10,
                   fontWeight: FontWeight.bold),
             ),
           ),

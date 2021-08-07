@@ -11,7 +11,7 @@ class LoginTypeTwo extends StatelessWidget {
       body: Stack(
         children: [
           Container(
-            color: white,
+            color: ContraColor.white,
             padding: EdgeInsets.symmetric(horizontal: 24.0),
             child: Column(
               children: [
@@ -37,7 +37,7 @@ class LoginTypeTwo extends StatelessWidget {
                         textAlign: TextAlign.start,
                         style: TextStyle(
                           fontSize: 21,
-                          color: trout,
+                          color: ContraColor.trout,
                           fontWeight: FontWeight.w500,
                         ),
                       ),
@@ -63,10 +63,10 @@ class LoginTypeTwo extends StatelessWidget {
                       ContraIconButton(
                         label: 'Sign in',
                         onPressed: () {},
-                        shadowColor: wood_smoke,
-                        bordercolor: wood_smoke,
-                        primaryColor: lightening_yellow,
-                        onPrimaryColor: wood_smoke,
+                        shadowColor: ContraColor.wood_smoke,
+                        bordercolor: ContraColor.wood_smoke,
+                        primaryColor: ContraColor.lightening_yellow,
+                        onPrimaryColor: ContraColor.wood_smoke,
                         isShadow: true,
                       ),
                       SizedBox(

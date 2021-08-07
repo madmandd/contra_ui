@@ -1,28 +1,30 @@
 import 'package:flutter/material.dart';
 
-class ChartMainView extends StatelessWidget {
-  const ChartMainView({ Key? key }) : super(key: key);
+
+class OnboardingMainView extends StatelessWidget {
+  const OnboardingMainView({ Key? key }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Data and Satistics'),
+        title: Text('Onboarding'),
       ),
       body: SingleChildScrollView(
         child: Column(
           children: [
             ListTile(
-              title: Text('Bar Chart'),
-              contentPadding: EdgeInsets.all(20.0),
+              contentPadding: const EdgeInsets.all(20.0),
               trailing: Icon(Icons.navigate_next),
+              title: Text('Type One'),
               onTap: () {
-                Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => ));
-              }
+                // Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => ()));
+              },
             )
           ],
         ),
       ),
+
       
     );
   }

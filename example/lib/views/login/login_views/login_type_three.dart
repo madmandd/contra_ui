@@ -12,7 +12,7 @@ class LoginTypeThree extends StatelessWidget {
         alignment: Alignment.bottomCenter,
         children: [
           Container(
-            color: lightening_yellow,
+            color: ContraColor.lightening_yellow,
             alignment: Alignment.center,
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -55,7 +55,7 @@ class LoginTypeThree extends StatelessWidget {
             margin: EdgeInsets.all(24.0),
             padding: EdgeInsets.all(24.0),
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(16.0), color: white),
+                borderRadius: BorderRadius.circular(16.0), color: ContraColor.white),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.start,
@@ -70,7 +70,7 @@ class LoginTypeThree extends StatelessWidget {
                   "You don’t think you should login first and behave like human not robot.",
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                      fontSize: 17, color: trout, fontWeight: FontWeight.w500),
+                      fontSize: 17, color: ContraColor.trout, fontWeight: FontWeight.w500),
                 ),
                 SizedBox(
                   height: 16,
@@ -83,7 +83,7 @@ class LoginTypeThree extends StatelessWidget {
                   isSuffixIcon: true,
                   icon: SvgPicture.asset(
                     '../assets/icons/mail.svg',
-                    color: white,
+                    color: ContraColor.white,
                   ),
                 ),
                 SizedBox(
@@ -94,12 +94,12 @@ class LoginTypeThree extends StatelessWidget {
                     Navigator.of(context).pop();
                   },
                   label: 'Facebook',
-                  primaryColor: persian_blue,
-                  bordercolor: persian_blue,
+                  primaryColor: ContraColor.persian_blue,
+                  bordercolor: ContraColor.persian_blue,
                   isSuffixIcon: true,
                   icon: SvgPicture.asset(
                     '../assets/icons/facebook.svg',
-                    color: white,
+                    color: ContraColor.white,
                   ),
                 ),
                 SizedBox(
@@ -109,13 +109,13 @@ class LoginTypeThree extends StatelessWidget {
                   onPressed: () {
                     Navigator.of(context).pop();
                   },
-                  primaryColor: carribean_green,
-                  bordercolor: carribean_green,
+                  primaryColor: ContraColor.carribean_green,
+                  bordercolor: ContraColor.carribean_green,
                   label: 'Twitter',
                   isSuffixIcon: true,
                   icon: SvgPicture.asset(
                     '../assets/icons/twitter.svg',
-                    color: white,
+                    color: ContraColor.white,
                   ),
                 ),
               ],

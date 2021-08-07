@@ -12,7 +12,7 @@ class LoginTypeFour extends StatelessWidget {
         alignment: Alignment.bottomCenter,
         children: [
           Container(
-            color: flamingo,
+            color: ContraColor.flamingo,
             alignment: Alignment.center,
             child: SvgPicture.asset(
               '../assets/images/peep_standing_center.svg',
@@ -29,10 +29,10 @@ class LoginTypeFour extends StatelessWidget {
                 topRight: Radius.circular(16.0),
                 topLeft: Radius.circular(16.0),
               )),
-              color: white,
+              color: ContraColor.white,
               shadows: [
                 BoxShadow(
-                  color: wood_smoke,
+                  color: ContraColor.wood_smoke,
                   offset: Offset(0.0, -6.0),
                 ),
               ],
@@ -54,7 +54,7 @@ class LoginTypeFour extends StatelessWidget {
                             style: TextStyle(
                               fontSize: 24,
                               fontWeight: FontWeight.w800,
-                              color: wood_smoke,
+                              color: ContraColor.wood_smoke,
                             ),
                           ),
                         ),
@@ -66,7 +66,7 @@ class LoginTypeFour extends StatelessWidget {
                             },
                             icon: SvgPicture.asset(
                               '../assets/icons/close.svg',
-                              color: wood_smoke,
+                              color: ContraColor.wood_smoke,
                             ),
                           ),
                         ),
@@ -76,7 +76,7 @@ class LoginTypeFour extends StatelessWidget {
                 ),
                 Divider(
                   thickness: 2,
-                  color: wood_smoke,
+                  color: ContraColor.wood_smoke,
                 ),
                 SizedBox(
                   height: 24,
@@ -112,7 +112,7 @@ class LoginTypeFour extends StatelessWidget {
                     isPrefixIcon: true,
                     icon: SvgPicture.asset(
                       '../assets/icons/arrow_next.svg',
-                      color: white,
+                      color: ContraColor.white,
                     ),
                   ),
                 ),

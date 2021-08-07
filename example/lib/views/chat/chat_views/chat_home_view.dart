@@ -43,16 +43,16 @@ class _ChatHomeViewState extends State<ChatHomeView> {
         ],
         currentIndex: _currentIndex,
         onTap: _onItemTapped,
-        selectedItemColor: wood_smoke,
-        unselectedItemColor: trout,
+        selectedItemColor: ContraColor.wood_smoke,
+        unselectedItemColor: ContraColor.trout,
         showSelectedLabels: true,
         showUnselectedLabels: true,
-        selectedIconTheme: IconThemeData(color: wood_smoke, opacity: 1),
-        unselectedIconTheme: IconThemeData(color: trout, opacity: 0.6),
+        selectedIconTheme: IconThemeData(color: ContraColor.wood_smoke, opacity: 1),
+        unselectedIconTheme: IconThemeData(color: ContraColor.trout, opacity: 0.6),
         selectedLabelStyle: TextStyle(
-            color: wood_smoke, fontSize: 12, fontWeight: FontWeight.w800),
+            color: ContraColor.wood_smoke, fontSize: 12, fontWeight: FontWeight.w800),
         unselectedLabelStyle:
-            TextStyle(color: trout, fontSize: 12, fontWeight: FontWeight.w800),
+            TextStyle(color: ContraColor.trout, fontSize: 12, fontWeight: FontWeight.w800),
       ),
     );
   }

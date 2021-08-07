@@ -1,6 +1,6 @@
-
+import 'package:example/views/onboarding/onboarding_main.dart';
 import 'package:flutter/material.dart';
-import 'views/chart/line_chart.dart';
+
 
 
 void main() {
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         fontFamily: 'Montserrat'
       ),
-      home: LineChartView(),
+      home: OnboardingMainView(),
     );
   }
 }

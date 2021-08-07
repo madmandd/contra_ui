@@ -49,12 +49,12 @@ class ChatMessageItem extends StatelessWidget {
               margin: EdgeInsets.symmetric(vertical: 1.0),
               padding: EdgeInsets.all(16.0),
               decoration: ShapeDecoration(
-                color: message!.isUser ? caribbean_color : lightening_yellow, 
+                color: message!.isUser ? ContraColor.caribbean_color : ContraColor.lightening_yellow, 
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.all(Radius.circular(16.0)),
                   side: BorderSide(
                     width: 2,
-                    color: borderColor ?? wood_smoke,
+                    color: borderColor ?? ContraColor.wood_smoke,
                   ),
                 ),
               ),
@@ -62,7 +62,7 @@ class ChatMessageItem extends StatelessWidget {
                 message!.message,
                 textAlign: TextAlign.start,
                 style: TextStyle(
-                  color: textColor ?? wood_smoke,
+                  color: textColor ?? ContraColor.wood_smoke,
                   fontWeight: FontWeight.bold,
                   fontSize: 17,
                 ),

@@ -36,29 +36,29 @@ class ContraInputText extends StatelessWidget {
           hintStyle: TextStyle(
             fontSize: 21,
             fontWeight: FontWeight.w500,
-            color: wood_smoke,
+            color: ContraColor.wood_smoke,
           ),
           contentPadding: EdgeInsets.all(16.0),
           enabledBorder: OutlineInputBorder(
-            borderSide: BorderSide(width: 2, color: boderColor ?? black),
+            borderSide: BorderSide(width: 2, color: boderColor ?? ContraColor.black),
             borderRadius: BorderRadius.all(
               Radius.circular(16.0),
             ),
           ),
           disabledBorder: OutlineInputBorder(
-            borderSide: BorderSide(width: 2, color: boderColor ?? black),
+            borderSide: BorderSide(width: 2, color: boderColor ?? ContraColor.black),
             borderRadius: BorderRadius.all(
               Radius.circular(16.0),
             ),
           ),
           focusedBorder: OutlineInputBorder(
-            borderSide: BorderSide(width: 2, color: boderColor ?? black),
+            borderSide: BorderSide(width: 2, color: boderColor ?? ContraColor.black),
             borderRadius: BorderRadius.all(
               Radius.circular(16.0),
             ),
           ),
           border: OutlineInputBorder(
-            borderSide: BorderSide(width: 2, color: boderColor ?? black),
+            borderSide: BorderSide(width: 2, color: boderColor ?? ContraColor.black),
             borderRadius: BorderRadius.all(
               Radius.circular(16.0),
             ),
@@ -103,7 +103,7 @@ class PinInputText extends StatelessWidget {
         style: TextStyle(
           fontSize: 24,
           fontWeight: FontWeight.w800,
-          color: textColor ?? wood_smoke,
+          color: textColor ?? ContraColor.wood_smoke,
         ),
         keyboardType: TextInputType.number,
         decoration: InputDecoration(
@@ -111,14 +111,14 @@ class PinInputText extends StatelessWidget {
           hintStyle: TextStyle(
             fontSize: 24,
             fontWeight: FontWeight.w800,
-            color: textColor ?? wood_smoke,
+            color: textColor ?? ContraColor.wood_smoke,
           ),
           hintText: "_",
           contentPadding: EdgeInsets.all(2.0),
           enabledBorder: OutlineInputBorder(
             borderSide: BorderSide(
               width: 2.0,
-              color: borderColor ?? black,
+              color: borderColor ?? ContraColor.black,
             ),
             borderRadius: BorderRadius.all(
               Radius.circular(16.0),
@@ -127,7 +127,7 @@ class PinInputText extends StatelessWidget {
           disabledBorder: OutlineInputBorder(
             borderSide: BorderSide(
               width: 2.0,
-              color: borderColor ?? black,
+              color: borderColor ?? ContraColor.black,
             ),
             borderRadius: BorderRadius.all(
               Radius.circular(16.0),
@@ -136,7 +136,7 @@ class PinInputText extends StatelessWidget {
           focusedBorder: OutlineInputBorder(
             borderSide: BorderSide(
               width: 2.0,
-              color: borderColor ?? black,
+              color: borderColor ?? ContraColor.black,
             ),
             borderRadius: BorderRadius.all(
               Radius.circular(16.0),
@@ -145,7 +145,7 @@ class PinInputText extends StatelessWidget {
           border: OutlineInputBorder(
             borderSide: BorderSide(
               width: 2.0,
-              color: borderColor ?? black,
+              color: borderColor ?? ContraColor.black,
             ),
             borderRadius: BorderRadius.all(
               Radius.circular(16.0),
@@ -194,23 +194,23 @@ class ContraDescriptionTextField extends StatelessWidget {
           hintStyle: TextStyle(
             fontSize: 21,
             fontWeight: FontWeight.w500,
-            color: textColor ?? wood_smoke,
+            color: textColor ?? ContraColor.wood_smoke,
           ),
           contentPadding: EdgeInsets.all(16),
           enabledBorder: OutlineInputBorder(
-            borderSide: BorderSide(width: 2, color: borderColor ?? black),
+            borderSide: BorderSide(width: 2, color: borderColor ?? ContraColor.black),
             borderRadius: BorderRadius.all(Radius.circular(16.0)),
           ),
           disabledBorder: OutlineInputBorder(
-            borderSide: BorderSide(width: 2, color: borderColor ?? black),
+            borderSide: BorderSide(width: 2, color: borderColor ?? ContraColor.black),
             borderRadius: BorderRadius.all(Radius.circular(16.0)),
           ),
           focusedBorder: OutlineInputBorder(
-            borderSide: BorderSide(width: 2, color: borderColor ?? black),
+            borderSide: BorderSide(width: 2, color: borderColor ?? ContraColor.black),
             borderRadius: BorderRadius.all(Radius.circular(16.0)),
           ),
           border: OutlineInputBorder(
-            borderSide: BorderSide(width: 2, color: borderColor ?? black),
+            borderSide: BorderSide(width: 2, color: borderColor ?? ContraColor.black),
             borderRadius: BorderRadius.all(Radius.circular(16.0)),
           ),
           prefixIcon: icon,
@@ -250,12 +250,13 @@ class ContraSearchTextField extends StatelessWidget {
         shadows: [
           BoxShadow(
             offset: Offset(0.0, 4.0),
-            color: shadowColor ?? wood_smoke,
+            color: shadowColor ?? ContraColor.wood_smoke,
           )
         ],
-        color: white,
+        color: ContraColor.white,
         shape: RoundedRectangleBorder(
-          side: BorderSide(width: 2, color: borderColor ?? wood_smoke),
+          side: BorderSide(
+              width: 2, color: borderColor ?? ContraColor.wood_smoke),
           borderRadius: BorderRadius.all(
             Radius.circular(16.0),
           ),
@@ -274,7 +275,7 @@ class ContraSearchTextField extends StatelessWidget {
           hintStyle: TextStyle(
             fontSize: 21,
             fontWeight: FontWeight.w500,
-            color: textColor ?? wood_smoke,
+            color: textColor ?? ContraColor.wood_smoke,
           ),
           contentPadding: EdgeInsets.all(16),
           enabledBorder: OutlineInputBorder(
@@ -323,7 +324,10 @@ class ContraSendTextField extends StatelessWidget {
       decoration: ShapeDecoration(
           shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.all(Radius.circular(60.0)),
-        side: BorderSide(width: 2, color: borderColor ?? wood_smoke),
+        side: BorderSide(
+          width: 2,
+          color: borderColor ?? ContraColor.wood_smoke,
+        ),
       )),
       child: Row(
         children: [
@@ -334,7 +338,7 @@ class ContraSendTextField extends StatelessWidget {
                 hintStyle: TextStyle(
                   fontSize: 17,
                   fontWeight: FontWeight.w500,
-                  color: textColor ?? santas_gray,
+                  color: textColor ?? ContraColor.santas_gray,
                 ),
                 contentPadding: EdgeInsets.all(16),
                 enabledBorder: OutlineInputBorder(
@@ -355,12 +359,12 @@ class ContraSendTextField extends StatelessWidget {
           IconButton(
             onPressed: () {},
             icon: Icon(Icons.keyboard_voice),
-            color: borderColor ?? wood_smoke,
+            color: borderColor ?? ContraColor.wood_smoke,
           ),
           IconButton(
             onPressed: onPressed,
             icon: Icon(Icons.send),
-            color: borderColor ?? wood_smoke,
+            color: borderColor ?? ContraColor.wood_smoke,
           ),
         ],
       ),

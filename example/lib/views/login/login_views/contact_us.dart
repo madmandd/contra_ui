@@ -39,7 +39,7 @@ class ContactUsForm extends StatelessWidget {
                         textAlign: TextAlign.start,
                         style: TextStyle(
                           fontSize: 21,
-                          color: trout,
+                          color: ContraColor.trout,
                           fontWeight: FontWeight.w500,
                         ),
                       ),

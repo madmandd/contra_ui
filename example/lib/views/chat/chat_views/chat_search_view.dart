@@ -122,7 +122,7 @@ class _ChatSearchViewState extends State<ChatSearchView> {
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 120,
-        backgroundColor: white,
+        backgroundColor: ContraColor.white,
         automaticallyImplyLeading: false,
         titleSpacing: 0.0,
         elevation: 0.0,
@@ -155,7 +155,7 @@ class _ChatSearchViewState extends State<ChatSearchView> {
         ),
       ),
       body: Container(
-        color: white,
+        color: ContraColor.white,
         child: ListView.builder(
           itemCount: _filtered.length,
           padding: EdgeInsets.all(24.0),

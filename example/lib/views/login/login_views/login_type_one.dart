@@ -11,7 +11,7 @@ class LoginTypeOne extends StatelessWidget {
       body: Stack(
         children: [
           Container(
-            color: white,
+            color: ContraColor.white,
             padding: EdgeInsets.symmetric(horizontal: 24.0),
             child: Column(
               children: [
@@ -75,7 +75,7 @@ class LoginTypeOne extends StatelessWidget {
                           padding: const EdgeInsets.all(8.0),
                           child: SvgPicture.asset(
                             '../assets/icons/arrow_next.svg',
-                            color: white,
+                            color: ContraColor.white,
                           ),
                         ),
                         onPressed: () {},
@@ -98,7 +98,7 @@ class LoginTypeOne extends StatelessWidget {
             top: 80,
             child: ContraIconCircleButton(
               size: 48,
-              backgroundColor: white,
+              backgroundColor: ContraColor.white,
               icon: SvgPicture.asset(
                 '../assets/icons/close.svg',
               ),
