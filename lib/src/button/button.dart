@@ -110,6 +110,7 @@ class ContraIconButton extends StatelessWidget {
                   color: onPrimaryColor ?? ContraColor.white,
                   fontSize: 21,
                   fontWeight: FontWeight.bold,
+                  decoration: TextDecoration.none,
                 ),
               ),
             ),
