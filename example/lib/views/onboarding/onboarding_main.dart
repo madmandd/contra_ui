@@ -1,4 +1,7 @@
+import 'package:example/views/onboarding/onboarding_views/onboarding_type_four.dart';
 import 'package:example/views/onboarding/onboarding_views/onboarding_type_one.dart';
+import 'package:example/views/onboarding/onboarding_views/onboarding_type_three.dart';
+import 'package:example/views/onboarding/onboarding_views/onboarding_type_two.dart';
 import 'package:flutter/material.dart';
 
 class OnboardingMainView extends StatelessWidget {
@@ -26,7 +29,7 @@ class OnboardingMainView extends StatelessWidget {
               trailing: Icon(Icons.navigate_next),
               title: Text('Type Two'),
               onTap: () {
-                // Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => ()));
+                Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => OnboardingViewTypeTwo()));
               },
             ),
             ListTile(
@@ -34,7 +37,7 @@ class OnboardingMainView extends StatelessWidget {
               trailing: Icon(Icons.navigate_next),
               title: Text('Type Three'),
               onTap: () {
-                // Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => ()));
+                Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => OnboardingViewTypeThree()));
               },
             ),
             ListTile(
@@ -42,7 +45,7 @@ class OnboardingMainView extends StatelessWidget {
               trailing: Icon(Icons.navigate_next),
               title: Text('Type Four'),
               onTap: () {
-                // Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => ()));
+                Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => OnboardingViewTypeFour()));
               },
             ),
           ],

@@ -205,3 +205,31 @@ class ContraBadge extends StatelessWidget {
     );
   }
 }
+
+class ContraCircleDot extends StatelessWidget {
+  final bool isActive;
+  final Color? color;
+  final Color? borderColor;
+
+  const ContraCircleDot(
+      {Key? key, this.isActive = false, this.color, this.borderColor})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return AnimatedContainer(
+      duration: Duration(milliseconds: 150),
+      margin: EdgeInsets.symmetric(horizontal: 8.0),
+      height: isActive ? 14 : 10,
+      width: isActive ? 14 : 10,
+      decoration: BoxDecoration(
+        border: Border.all(
+          width: 2.0,
+          color: borderColor ?? ContraColor.white,
+        ),
+        color: color ?? ContraColor.white,
+        shape: BoxShape.circle,
+      ),
+    );
+  }
+}

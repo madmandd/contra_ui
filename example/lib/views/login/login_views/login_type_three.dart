@@ -109,8 +109,8 @@ class LoginTypeThree extends StatelessWidget {
                   onPressed: () {
                     Navigator.of(context).pop();
                   },
-                  primaryColor: ContraColor.carribean_green,
-                  bordercolor: ContraColor.carribean_green,
+                  primaryColor: ContraColor.caribbean_color,
+                  bordercolor: ContraColor.caribbean_color,
                   label: 'Twitter',
                   isSuffixIcon: true,
                   icon: SvgPicture.asset(
