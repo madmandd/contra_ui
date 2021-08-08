@@ -41,7 +41,7 @@ class ContraButton extends StatelessWidget {
 }
 
 class ContraIconButton extends StatelessWidget {
-  final VoidCallback? onPressed;
+  final VoidCallback onPressed;
   final Widget? icon;
   final String? label;
   final double? width;
@@ -51,9 +51,9 @@ class ContraIconButton extends StatelessWidget {
   final Color? onPrimaryColor;
   final Color? bordercolor;
 
-  final bool? isSuffixIcon;
-  final bool? isPrefixIcon;
-  final bool? isShadow;
+  final bool isSuffixIcon;
+  final bool isPrefixIcon;
+  final bool isShadow;
 
   const ContraIconButton({
     Key? key,

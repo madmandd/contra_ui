@@ -2,7 +2,6 @@ import 'package:contra_ui/contra_ui.dart';
 import 'package:example/views/chat/chat_message_item.dart';
 import 'package:flutter/material.dart';
 
-
 import '../message_model.dart';
 
 class ChatMessagesView extends StatefulWidget {
@@ -14,10 +13,14 @@ class ChatMessagesView extends StatefulWidget {
 }
 
 class _ChatMessagesViewState extends State<ChatMessagesView> {
-  List<Message?> _items = []..add(
-      Message(name: "Kai", message: "The end is near", time: "3.20 AM", isUser: false))
-      ..add(
-      Message(name: "Charli", message: "Shut up", time: "3.20 AM", isUser: true));
+  List<Message?> _items = []
+    ..add(Message(
+        name: "Kai",
+        message: "The end is near",
+        time: "3.20 AM",
+        isUser: false))
+    ..add(Message(
+        name: "Charli", message: "Shut up", time: "3.20 AM", isUser: true));
 
   @override
   void initState() {
@@ -105,23 +108,25 @@ class _ChatMessagesViewState extends State<ChatMessagesView> {
         backgroundColor: ContraColor.white,
         elevation: 0,
         leading: IconButton(
-            onPressed: () {
-              Navigator.of(context).pop();
-            },
-            color: ContraColor.wood_smoke,
-            icon: Icon(Icons.arrow_back)),
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+          color: ContraColor.wood_smoke,
+          icon: Icon(Icons.arrow_back),
+        ),
         title: ContraText(
           alignment: Alignment.topLeft,
           text: '${widget.chat!.name}',
         ),
         actions: [
           IconButton(
-              onPressed: () {},
-              icon: Icon(
-                Icons.video_call,
-                color: ContraColor.black,
-                size: 36,
-              ))
+            onPressed: () {},
+            icon: Icon(
+              Icons.video_call,
+              color: ContraColor.black,
+              size: 36,
+            ),
+          ),
         ],
       ),
       body: Container(
