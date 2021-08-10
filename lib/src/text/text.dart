@@ -1,22 +1,26 @@
 import 'package:contra_ui/contra_ui.dart';
 import 'package:flutter/material.dart';
 
+///
+/// [ContraText] fontsize 36, textColor black, alignment center
+///
 class ContraText extends StatelessWidget {
+  const ContraText({
+    Key? key,
+    required this.text,
+    this.alignment,
+    this.fontSize,
+    this.fontWeight,
+    this.textAlign,
+    this.textColor,
+  }) : super(key: key);
+
   final AlignmentGeometry? alignment;
   final String text;
   final double? fontSize;
   final FontWeight? fontWeight;
   final TextAlign? textAlign;
   final Color? textColor;
-
-  ContraText({
-    this.alignment,
-    required this.text,
-    this.fontSize,
-    this.fontWeight,
-    this.textAlign,
-    this.textColor,
-  });
 
   @override
   Widget build(BuildContext context) {
@@ -110,6 +114,63 @@ class ContraTextImage extends StatelessWidget {
             color: textColor ?? ContraColor.white,
           ),
         ),
+      ),
+    );
+  }
+}
+
+class ContraHeader extends StatelessWidget {
+  final String firstText;
+  final String secondText;
+  final Color? foregroundColor;
+  final Color? textColor;
+  final Color? backgroundColor;
+  const ContraHeader({
+    Key? key,
+    required this.firstText,
+    required this.secondText,
+    this.foregroundColor,
+    this.textColor,
+    this.backgroundColor,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.all(24.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Stack(
+            children: [
+              Text(
+                firstText,
+                style: TextStyle(
+                    fontSize: 44,
+                    fontWeight: FontWeight.w800,
+                    foreground: Paint()
+                      ..style = PaintingStyle.stroke
+                      ..strokeWidth = 1
+                      ..color = foregroundColor ?? ContraColor.wood_smoke),
+              ),
+              Text(
+                firstText,
+                style: TextStyle(
+                  fontSize: 44,
+                  color: backgroundColor ?? ContraColor.white,
+                  fontWeight: FontWeight.w800,
+                ),
+              )
+            ],
+          ),
+          ContraText(
+            text: secondText,
+            alignment: Alignment.centerLeft,
+            fontSize: 44,
+            textColor: textColor,
+          )
+        ],
       ),
     );
   }

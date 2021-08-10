@@ -1,3 +1,5 @@
+import 'package:contra_ui/contra_ui.dart';
+
 import '../constant.dart';
 import 'package:flutter/material.dart';
 
@@ -7,6 +9,9 @@ class ContraButton extends StatelessWidget {
   final double? fontSize;
   final double? width;
   final double? height;
+  final Color? primaryColor;
+  final Color? onPrimaryColor;
+  final Color? borderColor;
 
   ContraButton({
     Key? key,
@@ -15,6 +20,7 @@ class ContraButton extends StatelessWidget {
     this.height,
     this.width,
     this.fontSize,
+    this.primaryColor, this.onPrimaryColor, this.borderColor,
   }) : super(key: key);
 
   @override
@@ -22,16 +28,21 @@ class ContraButton extends StatelessWidget {
     Size? size = MediaQuery.of(context).size;
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
+        primary: primaryColor ?? ContraColor.wood_smoke,
+        onPrimary: onPrimaryColor ?? ContraColor.white,
         minimumSize: Size(width ?? size.width, height ?? 48.0),
         padding: const EdgeInsets.symmetric(horizontal: 16.0),
-        shape:
-            RoundedRectangleBorder(borderRadius: BorderRadius.circular(16.0)),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(16.0),
+          side: BorderSide(color: borderColor ?? ContraColor.wood_smoke)
+        ),
       ),
       onPressed: onPressed,
       child: Text(
         text!,
         maxLines: 1,
         style: TextStyle(
+          color: onPrimaryColor ?? ContraColor.white,
           fontSize: fontSize ?? 12,
           fontWeight: FontWeight.w800,
         ),
@@ -143,9 +154,9 @@ class ContraIconCircleButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(8.0),
-      height: size ?? size,
-      width: size ?? size,
+      padding: const EdgeInsets.all(4.0),
+      height: size ?? 48,
+      width: size ?? 48,
       decoration: ShapeDecoration(
         shape: CircleBorder(
           side: BorderSide(width: 2, color: borderColor ?? ContraColor.black),
