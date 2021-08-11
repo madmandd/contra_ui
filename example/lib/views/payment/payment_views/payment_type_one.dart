@@ -22,7 +22,6 @@ class _PaymentViewTypeOneState extends State<PaymentViewTypeOne> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: ContraColor.white,
       appBar: AppBar(
         backgroundColor: ContraColor.white,
         toolbarHeight: 120,

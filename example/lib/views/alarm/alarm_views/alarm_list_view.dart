@@ -41,18 +41,19 @@ class _AlarmListViewState extends State<AlarmListView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          toolbarHeight: 100,
-          elevation: 0.0,
-          backgroundColor: ContraColor.white,
-          automaticallyImplyLeading: false,
-          title: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8.0),
-            child: ContraText(
-              text: 'Alarm',
-              fontSize: 41,
-              alignment: Alignment.centerLeft,
-            ),
-          )),
+        toolbarHeight: 100,
+        elevation: 0.0,
+        backgroundColor: ContraColor.white,
+        automaticallyImplyLeading: false,
+        title: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 8.0),
+          child: ContraText(
+            text: 'Alarm',
+            fontSize: 41,
+            alignment: Alignment.centerLeft,
+          ),
+        ),
+      ),
       body: ListView.builder(
         itemCount: list.length,
         itemBuilder: (BuildContext context, int index) {

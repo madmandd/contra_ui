@@ -1,5 +1,6 @@
 import 'package:contra_ui/contra_ui.dart';
-import 'package:example/views/alarm/alarm_main.dart';
+
+import 'package:example/views/menu/menu_main.dart';
 import 'package:flutter/material.dart';
 
 
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
           elevation: 0.0,
         )
       ),
-      home: AlarmMainView(),
+      home: MenuMainView(),
     );
   }
 }
