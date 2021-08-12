@@ -29,3 +29,20 @@ class User {
     required this.backgroundColor,
   });
 }
+
+
+class Author {
+  final String designation;
+  final String name;
+  final String path;
+
+  const Author({required this.designation, required this.name, required this.path});
+}
+
+class AuthorText {
+  final String subject;
+  final String hour;
+  final Color backgroundColor;
+
+  const AuthorText({ required this.backgroundColor, required this.hour, required this.subject });
+}

@@ -1,9 +1,6 @@
 import 'package:contra_ui/contra_ui.dart';
 import 'package:flutter/material.dart';
 
-///
-/// [ContraText] fontsize 36, textColor black, alignment center
-///
 class ContraText extends StatelessWidget {
   const ContraText({
     Key? key,

@@ -43,7 +43,7 @@ class ContraButton extends StatelessWidget {
         maxLines: 1,
         style: TextStyle(
           color: onPrimaryColor ?? ContraColor.white,
-          fontSize: fontSize ?? 12,
+          fontSize: fontSize ?? 17,
           fontWeight: FontWeight.w800,
         ),
       ),

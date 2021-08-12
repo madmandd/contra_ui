@@ -1,7 +1,6 @@
 import 'package:contra_ui/contra_ui.dart';
-import 'package:example/views/content/content_views/user_list_view.dart';
+import 'package:example/views/content/content_views/detail_view_type_two.dart';
 
-import 'package:example/views/menu/menu_main.dart';
 import 'package:flutter/material.dart';
 
 
@@ -22,7 +21,7 @@ class MyApp extends StatelessWidget {
           elevation: 0.0,
         )
       ),
-      home: UserListView(),
+      home: DetailViewTypeTwo(),
     );
   }
 }
