@@ -1,10 +1,9 @@
 import 'package:example/views/alarm/alarm_views/add_alarm_view.dart';
 import 'package:example/views/alarm/alarm_views/alarm_list_view.dart';
-import 'package:example/views/alarm/alarm_views/circular_list_view.dart';
+
 import 'package:example/views/alarm/alarm_views/clock_list_view.dart';
 import 'package:example/views/alarm/alarm_views/weather_detail_view.dart';
 import 'package:example/views/alarm/alarm_views/weather_list_view.dart';
-import 'package:example/views/alarm/clock_list_item.dart';
 import 'package:flutter/material.dart';
 
 class AlarmMainView extends StatelessWidget {
