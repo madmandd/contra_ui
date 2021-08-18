@@ -20,7 +20,9 @@ class ContraButton extends StatelessWidget {
     this.height,
     this.width,
     this.fontSize,
-    this.primaryColor, this.onPrimaryColor, this.borderColor,
+    this.primaryColor,
+    this.onPrimaryColor,
+    this.borderColor,
   }) : super(key: key);
 
   @override
@@ -33,9 +35,8 @@ class ContraButton extends StatelessWidget {
         minimumSize: Size(width ?? size.width, height ?? 48.0),
         padding: const EdgeInsets.symmetric(horizontal: 16.0),
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(16.0),
-          side: BorderSide(color: borderColor ?? ContraColor.wood_smoke)
-        ),
+            borderRadius: BorderRadius.circular(16.0),
+            side: BorderSide(color: borderColor ?? ContraColor.wood_smoke)),
       ),
       onPressed: onPressed,
       child: Text(
@@ -112,7 +113,7 @@ class ContraIconButton extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            isSuffixIcon == true ? icon! : SizedBox(),
+            isPrefixIcon == true ? icon! : SizedBox(),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8.0),
               child: Text(
@@ -125,7 +126,7 @@ class ContraIconButton extends StatelessWidget {
                 ),
               ),
             ),
-            isPrefixIcon == true ? icon! : SizedBox(),
+            isSuffixIcon == true ? icon! : SizedBox(),
           ],
         ),
       ),
@@ -240,6 +241,262 @@ class ContraCircleDot extends StatelessWidget {
         ),
         color: color ?? ContraColor.white,
         shape: BoxShape.circle,
+      ),
+    );
+  }
+}
+
+class CartAddRemoveButton extends StatefulWidget {
+  const CartAddRemoveButton({Key? key}) : super(key: key);
+
+  @override
+  _CartAddRemoveButtonState createState() => _CartAddRemoveButtonState();
+}
+
+class _CartAddRemoveButtonState extends State<CartAddRemoveButton> {
+  late int count;
+
+  @override
+  void initState() {
+    super.initState();
+    count = 0;
+  }
+
+  void onAddClicked() {
+    if (count < 4) {
+      setState(() {
+        count = count + 1;
+        print('add clicked' + count.toString());
+      });
+    }
+  }
+
+  void onRemoveClicked() {
+    if (count > 0) {
+      setState(() {
+        count = count - 1;
+        print('remove clicked' + count.toString());
+      });
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 96,
+      height: 40,
+      decoration: ShapeDecoration(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10),
+          side: BorderSide(color: ContraColor.wood_smoke, width: 2),
+        ),
+      ),
+      child: Row(
+        mainAxisSize: MainAxisSize.max,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          count == 0
+              ? SizedBox()
+              : Expanded(
+                  child: GestureDetector(
+                    onTap: () {
+                      onRemoveClicked();
+                    },
+                    child: IconButton(
+                        onPressed: () {
+                          onRemoveClicked();
+                        },
+                        icon: Icon(
+                          Icons.remove,
+                          size: 24,
+                        )),
+                  ),
+                ),
+          count == 0
+              ? Expanded(
+                  flex: 2,
+                  child: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 8),
+                    alignment: Alignment.center,
+                    height: MediaQuery.of(context).size.height,
+                    decoration: ShapeDecoration(
+                      color: ContraColor.lightening_yellow,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(10),
+                          bottomLeft: Radius.circular(10),
+                        ),
+                      ),
+                    ),
+                    child: Text(
+                      'Add',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: ContraColor.wood_smoke,
+                        fontWeight: FontWeight.w800,
+                      ),
+                    ),
+                  ),
+                )
+              : Expanded(
+                  child: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 8),
+                    alignment: Alignment.center,
+                    height: MediaQuery.of(context).size.height,
+                    color: ContraColor.lightening_yellow,
+                    child: Text(
+                      count.toString(),
+                      style: TextStyle(
+                        color: ContraColor.wood_smoke,
+                        fontWeight: FontWeight.w800,
+                        fontSize: 18,
+                      ),
+                    ),
+                  ),
+                ),
+          Expanded(
+              child: GestureDetector(
+            onTap: () {
+              onAddClicked();
+            },
+            child: IconButton(
+              onPressed: () {
+                onAddClicked();
+              },
+              icon: Icon(
+                Icons.add,
+                size: 24,
+              ),
+            ),
+          ))
+        ],
+      ),
+    );
+  }
+}
+
+
+
+
+
+class ChipFilterWidget extends StatefulWidget {
+  final List<String> filters;
+  const ChipFilterWidget({Key? key, required this.filters}) : super(key: key);
+
+  @override
+  _ChipFilterWidgetState createState() => _ChipFilterWidgetState();
+}
+
+class _ChipFilterWidgetState extends State<ChipFilterWidget> {
+  List<String> options = [];
+  List<int> selectedChoices = [];
+
+  @override
+  void initState() {
+    super.initState();
+    options = widget.filters;
+    selectedChoices.add(0);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(left: 12.0),
+      child: Wrap(
+        alignment: WrapAlignment.start,
+        spacing: 12,
+        runSpacing: 12,
+        children: List<Widget>.generate(
+          options.length,
+          (int index) {
+            return ChipWidget(
+              selected: selectedChoices.contains(index),
+              text: options[index],
+              onPressed: () {
+                setState(() {
+                  selectedChoices.contains(index)
+                      ? selectedChoices.remove(index)
+                      : selectedChoices.add(index);
+                });
+              },
+            );
+            // ignore: dead_code
+            ChoiceChip(
+              disabledColor: ContraColor.white,
+              selectedColor: ContraColor.pastel_pink,
+              padding: EdgeInsets.all(12),
+              avatarBorder: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(16),
+                  side: BorderSide(color: ContraColor.wood_smoke, width: 2)),
+              label: Text(
+                options[index],
+                style: TextStyle(
+                    color: ContraColor.wood_smoke,
+                    fontWeight: FontWeight.w800,
+                    fontSize: 12),
+              ),
+              selected: selectedChoices.contains(index),
+              onSelected: (bool selected) {
+                setState(() {
+                  selectedChoices.contains(index)
+                      ? selectedChoices.remove(index)
+                      : selectedChoices.add(index);
+                });
+              },
+            );
+          },
+        ).toList(),
+      ),
+    );
+  }
+}
+
+class ChipWidget extends StatelessWidget {
+  final String text;
+  final bool selected;
+  final VoidCallback onPressed;
+
+  const ChipWidget({
+    Key? key,
+    required this.text,
+    required this.selected,
+    required this.onPressed,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: onPressed,
+      child: Container(
+        height: 48,
+        padding: EdgeInsets.all(12),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(
+              text,
+              style: TextStyle(
+                  color: ContraColor.wood_smoke, fontWeight: FontWeight.bold),
+            ),
+            selected
+                ? Icon(
+                    Icons.close,
+                    color: ContraColor.wood_smoke,
+                    size: 24,
+                  )
+                : SizedBox()
+          ],
+        ),
+        decoration: ShapeDecoration(
+          color: selected ? ContraColor.pastel_pink : ContraColor.white,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(Radius.circular(44)),
+            side: BorderSide(
+              color: ContraColor.wood_smoke,
+              width: 2,
+            ),
+          ),
+        ),
       ),
     );
   }
